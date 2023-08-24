@@ -1,0 +1,33 @@
+{
+    "cSpell.words": [
+        "bobthefish",
+        "certbot",
+        "dcli",
+        "dcompress",
+        "dcopydir",
+        "denv",
+        "dfind",
+        "dmailhog",
+        "dmysql",
+        "dnsflush",
+        "downit",
+        "dpath",
+        "dport",
+        "dreplace",
+        "dsetver",
+        "dsort",
+        "dvirtualbox",
+        "dwhich",
+        "dzfs",
+        "gactivate",
+        "gitadd",
+        "gitcreation",
+        "gitgc",
+        "gitsyncfork",
+        "gituncommited",
+        "gitupdate",
+        "hexdump",
+        "ipaddr"
+    ],
+    "editor.acceptSuggestionOnEnter": "on"
+}
