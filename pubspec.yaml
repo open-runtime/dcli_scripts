@@ -12,11 +12,11 @@ dependencies:
       path: dcli
   docker2: 
     git: 
-      url: https://github.com/tsavo-at-pieces/docker2.git
+      url: https://github.com/open-runtime/docker2.git
   path: ^1.8.3
   pub_release: 
     git: 
-      url: https://github.com/tsavo-at-pieces/pub_release.git
+      url: https://github.com/open-runtime/pub_release.git
   settings_yaml: ^7.0.0
   uuid: ^3.0.7
   win32: ^5.0.7
