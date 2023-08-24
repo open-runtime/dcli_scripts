@@ -177,7 +177,7 @@ packages:
       path: "."
       ref: HEAD
       resolved-ref: "519abab8b83b5946aa1081ca88b96fd7b168e9c1"
-      url: "https://github.com/tsavo-at-pieces/docker2.git"
+      url: "https://github.com/open-runtime/docker2.git"
     source: git
     version: "4.0.2"
   equatable:
@@ -418,7 +418,7 @@ packages:
       path: "."
       ref: HEAD
       resolved-ref: d7c4d50b9f14d54ab4aafae96f51615925187b8e
-      url: "https://github.com/tsavo-at-pieces/pub_release.git"
+      url: "https://github.com/open-runtime/pub_release.git"
     source: git
     version: "9.0.2"
   pub_semver:
