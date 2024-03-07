@@ -1,7 +1,7 @@
 name: dcli_scripts
 version: 3.2.0-alpha.2
 description: A collection of cli scripts that do odd jobs for me.
-repository: https://github.com/bsutton/dcli_scripts
+repository: https://github.com/open-runtime/dcli_scripts
 environment:
   sdk: '>=3.0.0 <4.0.0'
 dependencies:
