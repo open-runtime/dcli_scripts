@@ -1,68 +1,71 @@
 name: dcli_scripts
-version: 3.0.0
+version: 3.2.0-alpha.2
 description: A collection of cli scripts that do odd jobs for me.
 repository: https://github.com/bsutton/dcli_scripts
-environment: 
+environment:
   sdk: '>=3.0.0 <4.0.0'
-dependencies: 
+dependencies:
   args: ^2.4.2
   dcli:
     git:
       url: https://github.com/open-runtime/dcli.git
       path: dcli
-  docker2: 
+  docker:
     git: 
-      url: https://github.com/open-runtime/docker2.git
+      url: https://github.com/open-runtime/docker.git
   path: ^1.8.3
   pub_release: 
     git: 
       url: https://github.com/open-runtime/pub_release.git
-  settings_yaml: ^7.0.0
-  uuid: ^3.0.7
+  settings_yaml:
+    git:
+      url: https://github.com/open-runtime/settings_yaml.git
   win32: ^5.0.7
+  pubspec_manager: ^1.0.0-alpha.14
+  uuid: ^4.0.1
 
 dev_dependencies: 
   lint_hard: ^4.0.0
   test: ^1.24.6
 
-executables: 
-  add_gnome_launcher: 
-  artifactory: 
-  bobthefish: 
-  certbot_renew: 
-  clean: 
-  dcompress: 
-  dcopydir: 
-  denv: 
-  dfind: 
-  dmailhog: 
-  dnsflush: 
-  docker_dcli: 
-  docker_push: 
-  downit: 
-  dmysql: 
-  dpath: 
-  dport: 
-  dreplace: 
-  dsetver: 
-  dsort: 
-  dvirtualbox: 
-  dwc: 
-  dwhich: 
-  dzfs_clean: 
-  eclipse_launcher: 
-  find_old_dart_packages: 
-  find_text: 
-  gactivate: 
-  gitadd_team_to_repository: 
-  gitcreation_date: 
-  gitgc: 
-  gituncommited: 
-  gitsyncfork: 
-  gitupdate_remote: 
-  hexdump: 
-  hog: 
-  install_flutter: 
-  ipaddr: 
-  kill_tomcat: 
-  pub_get_all: 
+executables:
+  add_gnome_launcher:
+  artifactory:
+  bobthefish:
+  certbot_renew:
+  clean:
+  dcompress:
+  dcopydir:
+  denv:
+  dfind:
+  dmailhog:
+  dnsflush:
+  docker_dcli:
+  docker_push:
+  downit:
+  dmysql:
+  dpath:
+  dport:
+  dreplace:
+  dsetver:
+  dsort:
+  dvirtualbox:
+  dwc:
+  dwhich:
+  dzfs_clean:
+  eclipse_launcher:
+  find_old_dart_packages:
+  find_text:
+  gactivate:
+  gitadd_team_to_repository:
+  gitcreation_date:
+  gitgc:
+  gituncommited:
+  gitsyncfork:
+  gitupdate_remote:
+  hexdump:
+  hog:
+  install_flutter:
+  ipaddr:
+  kill_tomcat:
+  pub_get_all:
