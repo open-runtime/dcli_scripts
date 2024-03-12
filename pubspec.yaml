@@ -7,27 +7,24 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 dependencies:
   args: ^2.4.2
-  dcli:
-    git:
-      url: https://github.com/open-runtime/dcli.git
-      path: dcli
+  path: ^1.9.0
+  win32: ^5.3.0
+  pubspec_manager: ^1.0.0-beta.1
+  uuid: ^4.3.3
   docker:
-    git: 
-      url: https://github.com/open-runtime/docker.git
-  path: ^1.8.3
-  pub_release: 
-    git: 
-      url: https://github.com/open-runtime/pub_release.git
+    path: ../docker
+  pub_release:
+    path: ../pub_release
+  dcli:
+    path: ../dcli/dcli
+  dcli_sdk:
+    path: ../dcli/dcli_sdk
   settings_yaml:
-    git:
-      url: https://github.com/open-runtime/settings_yaml.git
-  win32: ^5.0.7
-  pubspec_manager: ^1.0.0-alpha.14
-  uuid: ^4.0.1
+   path: ../settings_yaml
 
 dev_dependencies: 
   lint_hard: ^4.0.0
-  test: ^1.24.6
+  test: ^1.25.2
 
 executables:
   add_gnome_launcher:

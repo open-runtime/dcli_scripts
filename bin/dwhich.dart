@@ -5,23 +5,48 @@
  * Written by Brett Sutton <bsutton@onepub.dev>, Jan 2022
  */
 
+// TODO: CRITICAL IMPLEMENTATION - https://github.com/onepub-dev/dcli_scripts/issues/3
+
+// The primary purpose of this code snippet is to search for a specific
+// application (referred to as 'appname') within the directories listed in the
+// PATH environment variable of the system. It aims to determine whether the
+// specified application exists and if it is executable. The process involves
+// iterating through the PATH directories, validating each path, and checking
+// for the presence and executability of the application. If the application is
+// found and is executable, the program prints the path to the application.
+// Additionally, the code handles various validations and error conditions,
+// such as empty paths or paths that do not exist, and reports any problems
+// detected during the search process.
+
 import 'dart:io';
 
 import 'package:dcli/dcli.dart';
-import 'package:dcli_scripts/src/dwhich/args.dart';
-import 'package:dcli_scripts/src/dwhich/exit_exception.dart';
+import 'package:args/args.dart' show ArgParser, ArgResults;
+import 'package:dcli_sdk/dcli_sdk.dart' show ExitException;
 import 'package:path/path.dart';
 
 /// dwhich appname - searches for 'appname' on the path
 void main(List<String> cliArgs) {
-  final Args args;
+  final ArgResults args;
   var found = false;
   var exectuable = false;
 
-  try {
-    args = Args.parse(cliArgs);
+  final parser = ArgParser()
+    ..addFlag(
+      'verbose',
+      abbr: 'v',
+      negatable: false,
+      help: 'Logs additional details to the cli',
+    );
 
-    Settings().setVerbose(enabled: args.debug);
+  final parsed = parser.parse(args);
+
+  try {
+    args = ArgParser().parse(cliArgs);
+
+    if (parsed.wasParsed('verbose')) {
+      Settings().setVerbose(enabled: true);
+    }
 
     // validation(args, () => 'Path: ${env['PATH']}');
 
@@ -62,8 +87,7 @@ void main(List<String> cliArgs) {
   }
   final goodPath = printProblems(args);
 
-  exit(ExitException.mapExitCode(
-      found: found, exectuable: exectuable, goodPath: goodPath));
+  exit(ExitException.mapExitCode(found: found, exectuable: exectuable, goodPath: goodPath));
 }
 
 bool validatePath(String path, Args args, String? lastPath) {
