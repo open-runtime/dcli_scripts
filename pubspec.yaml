@@ -1,5 +1,5 @@
 name: dcli_scripts
-version: 3.2.0-alpha.2
+version: 3.3.0
 description: A collection of cli scripts that do odd jobs for me.
 repository: https://github.com/open-runtime/dcli_scripts
 publish_to: 'none'
@@ -17,12 +17,14 @@ dependencies:
     path: ../pub_release
   dcli:
     path: ../dcli/dcli
+  dcli_core:
+    path: ../dcli/dcli_core
   dcli_sdk:
     path: ../dcli/dcli_sdk
   settings_yaml:
    path: ../settings_yaml
 
-dev_dependencies: 
+dev_dependencies:
   lint_hard: ^4.0.0
   test: ^1.25.2
 
