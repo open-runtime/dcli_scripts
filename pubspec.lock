@@ -122,12 +122,12 @@ packages:
     source: hosted
     version: "6.0.0"
   dart_console:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       path: "../dart_console"
       relative: true
     source: path
-    version: "1.1.2"
+    version: "1.1.2-local"
   dcli:
     dependency: "direct main"
     description:
@@ -136,21 +136,21 @@ packages:
     source: path
     version: "4.0.1-alpha.10"
   dcli_common:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       path: "../dcli/dcli_common"
       relative: true
     source: path
     version: "4.0.1-alpha.10"
   dcli_core:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       path: "../dcli/dcli_core"
       relative: true
     source: path
     version: "4.0.1-alpha.10"
   dcli_terminal:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       path: "../dcli/dcli_terminal"
       relative: true
@@ -554,7 +554,7 @@ packages:
     source: hosted
     version: "0.3.5"
   system_info:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       path: "../system_info"
       relative: true

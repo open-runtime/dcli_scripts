@@ -12,13 +12,9 @@ dependencies:
   pubspec_manager: ^1.0.0-beta.1
   uuid: ^4.3.3
   dcli:
-    path: ../dcli/dcli
   settings_yaml:
-    path: ../settings_yaml
   pub_release:
-    path: ../pub_release
   docker:
-    path: ../docker
 
 dev_dependencies:
   lint_hard: ^4.0.0
