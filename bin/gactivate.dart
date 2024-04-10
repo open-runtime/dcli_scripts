@@ -53,8 +53,7 @@ void compilePackage(ArgResults argResults) {
   final packageName = argResults.rest[0];
 
   final version = PubCache().findPrimaryVersion(packageName);
-  final pathToPackage =
-      PubCache().pathToPackage(packageName, version.toString());
+  final pathToPackage = PubCache().pathToPackage(packageName, version.toString());
 
   // we can't compile in the .pub_cache as pub get throws errors
   // so copy the package to a temp dir.
@@ -62,19 +61,18 @@ void compilePackage(ArgResults argResults) {
     copyTree(pathToPackage, tempDir);
     final pubspec = PubSpec.loadFromPath(join(tempDir, 'pubspec.yaml'));
     final execs = pubspec.executables;
-    if (execs.isEmpty) {
+    if (execs.missing) {
       printerr(red('No executables listed in the pubspec.yaml'));
       throw Exception('No executables listed in the pubspec.yaml');
     }
     final binDir = join(tempDir, 'bin');
-    for (final executable in execs) {
+    for (final executable in execs.list) {
       'dcli compile ${executable.scriptPath}'.start(workingDirectory: tempDir);
       final installPath = join(Settings().pathToDCliBin, executable.name);
       if (exists(installPath)) {
         delete(installPath);
       }
-      move(join(binDir, basenameWithoutExtension(executable.scriptPath)),
-          installPath);
+      move(join(binDir, basenameWithoutExtension(executable.scriptPath)), installPath);
     }
   });
 }
