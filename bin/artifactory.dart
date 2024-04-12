@@ -31,15 +31,20 @@ void main(List<String> args) {
 
   Settings().setVerbose(enabled: true);
   final parser = ArgParser()
-    ..addFlag('install', abbr: 'i', help: 'Install the artifactory OSS docker image')
-    ..addFlag('run', abbr: 'r', help: 'Run the artifactory docker image. This is the default action ')
+    ..addFlag('install',
+        abbr: 'i', help: 'Install the artifactory OSS docker image')
+    ..addFlag('run',
+        abbr: 'r',
+        help: 'Run the artifactory docker image. This is the default action ')
     ..addFlag('delete',
         abbr: 'd',
         help: 'Delete the artifactory docker container. '
             'The volume will be unaffected.')
-    ..addFlag('start', abbr: 's', help: 'Runs artifactory docker image as a daemon.')
+    ..addFlag('start',
+        abbr: 's', help: 'Runs artifactory docker image as a daemon.')
     ..addFlag('stop', abbr: 't', help: 'Stops the artifactory docker process')
-    ..addFlag('attach', abbr: 'a', help: 'Attach to the artifactory docker cli');
+    ..addFlag('attach',
+        abbr: 'a', help: 'Attach to the artifactory docker cli');
 
   final parsed = parser.parse(args);
   if (parsed['install'] as bool) {
@@ -91,7 +96,8 @@ void start({required bool daemon}) {
 
   final image = Docker().findImageByName(imageName);
   if (image == null) {
-    printerr(red("The artificatory image isn't installed. Run ./artifactory.dart --install"));
+    printerr(red(
+        "The artificatory image isn't installed. Run ./artifactory.dart --install"));
     return;
   }
 

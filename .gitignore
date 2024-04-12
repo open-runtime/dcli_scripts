@@ -33,3 +33,4 @@ bitbucket.yaml
 github.yaml
 .failed_tracker
 bin/tcp_echo
+pubspec.lock

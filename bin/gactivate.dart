@@ -53,7 +53,8 @@ void compilePackage(ArgResults argResults) {
   final packageName = argResults.rest[0];
 
   final version = PubCache().findPrimaryVersion(packageName);
-  final pathToPackage = PubCache().pathToPackage(packageName, version.toString());
+  final pathToPackage =
+      PubCache().pathToPackage(packageName, version.toString());
 
   // we can't compile in the .pub_cache as pub get throws errors
   // so copy the package to a temp dir.
@@ -72,7 +73,8 @@ void compilePackage(ArgResults argResults) {
       if (exists(installPath)) {
         delete(installPath);
       }
-      move(join(binDir, basenameWithoutExtension(executable.scriptPath)), installPath);
+      move(join(binDir, basenameWithoutExtension(executable.scriptPath)),
+          installPath);
     }
   });
 }
