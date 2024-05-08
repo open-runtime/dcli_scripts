@@ -8,21 +8,30 @@ environment:
 dependencies:
   args: ^2.4.2
   path: ^1.9.0
-  win32: ^5.3.0
+  win32: ^4.0.0
   pubspec_manager: ^1.0.0-beta.1
   uuid: ^4.3.3
   docker:
-    path: ../docker
+    git:
+      url: https://github.com/open-runtime/docker.git
   pub_release:
-    path: ../pub_release
+    git:
+      url: https://github.com/open-runtime/pub_release.git
   dcli:
-    path: ../dcli/dcli
+    git:
+      url: https://github.com/open-runtime/dcli.git
+      path: dcli
   dcli_core:
-    path: ../dcli/dcli_core
+    git:
+      url: https://github.com/open-runtime/dcli.git
+      path: dcli_core
   dcli_sdk:
-    path: ../dcli/dcli_sdk
+    git:
+      url: https://github.com/open-runtime/dcli.git
+      path: dcli_sdk
   settings_yaml:
-   path: ../settings_yaml
+    git:
+      url: https://github.com/open-runtime/settings_yaml.git
 
 dev_dependencies:
   lint_hard: ^4.0.0
